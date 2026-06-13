@@ -21,6 +21,10 @@ const ProductCard = ({ product }: ProductCardProps) => {
         className={styles.image}
         src={product.image}
         alt={product.title}
+        loading="lazy"
+        decoding="async"
+        width={300}
+        height={300}
         onClick={handleProductClick}
       />
       

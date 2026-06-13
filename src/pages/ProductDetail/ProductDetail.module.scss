@@ -43,9 +43,10 @@
 
 .imageSection img {
   width: 100%;
-  height: 90%;
-
+  height: auto;
+  aspect-ratio: 1 / 1;
   object-fit: contain;
+  display: block;
 }
 
 .thumbnailSection {

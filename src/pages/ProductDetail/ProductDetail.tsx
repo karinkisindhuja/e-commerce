@@ -132,12 +132,16 @@ const ProductDetail = () => {
             <img
               key={index}
               src={image}
-              alt="Image Thumbnail"
+              alt={`thumbnail-${index}`}
               className={
                 selectedImage === image
                   ? styles.activeThumbnail
                   : styles.thumbnail
               }
+              loading="lazy"
+              decoding="async"
+              width={90}
+              height={90}
               onClick={() => setSelectedImage(image)}
             />
           ))}
@@ -145,7 +149,14 @@ const ProductDetail = () => {
 
         {/* CENTER */}
         <div className={styles.imageSection}>
-          <img src={selectedImage} alt={product.title} />
+          <img
+            src={selectedImage}
+            alt={product.title}
+            loading="eager"
+            decoding="async"
+            width={600}
+            height={600}
+          />
         </div>
 
         {/* RIGHT */}
