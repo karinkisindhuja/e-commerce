@@ -8,7 +8,7 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ product }: ProductCardProps) => {
-  const { title, description, price } = product;
+  const { title, price } = product;
   const navigate = useNavigate();
 
   const { addToCart } = useContext(CartContext);

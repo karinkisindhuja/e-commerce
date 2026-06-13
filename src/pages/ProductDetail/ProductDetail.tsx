@@ -1,5 +1,5 @@
-import { useContext, useEffect, useMemo, useState } from "react";
-import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+import { Link, useParams, useSearchParams } from "react-router-dom";
 import { CartContext } from "../../stores/CartContext";
 import { productVariants } from "../../data/ProductVariants";
 import Toast from "../../components/Toast/Toast";
@@ -26,7 +26,6 @@ const ProductDetail = () => {
   const colorFromUrl = searchParams.get("color");
 
   const sizeFromUrl = searchParams.get("size");
-  const navigate=useNavigate();
   const updateVariantUrl = (color: string, size: string) => {
     setSearchParams({
       color,

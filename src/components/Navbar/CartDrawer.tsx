@@ -15,7 +15,7 @@ const CartDrawer = ({ isOpen, onClose }: CartDrawerProps) => {
   const [showToast, setShowToast] = useState(false);
 
   const subtotal = cartItems.reduce(
-    (total, item) => total + item.price * item.quantity,
+    (total: number, item: any) => total + item.price * item.quantity,
     0,
   );
 
@@ -48,7 +48,7 @@ const CartDrawer = ({ isOpen, onClose }: CartDrawerProps) => {
           {cartItems.length === 0 ? (
             <div className={styles.empty}>Your cart is empty</div>
           ) : (
-            cartItems.map((item) => (
+            cartItems.map((item: any) => (
               <div key={item.id} className={styles.cartItem}>
                 <img
                   src={item.image}
