@@ -1,5 +1,5 @@
 import { useContext, useEffect, useMemo, useState } from "react";
-import { useNavigate, useParams, useSearchParams } from "react-router-dom";
+import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { CartContext } from "../../stores/CartContext";
 import { productVariants } from "../../data/ProductVariants";
 import Toast from "../../components/Toast/Toast";
@@ -122,14 +122,11 @@ const ProductDetail = () => {
 
   return (
     <>
-    
       {showToast && <Toast message="Added to cart!" />}
-      <button className={styles.productCard_btn} onClick={()=>navigate("/")}>
-        <IoArrowBackSharp /> Home
-
-      </button>
-
       <div className={styles.productDetail}>
+        <Link to="/" className={styles.backLink}>
+          <IoArrowBackSharp /> Home
+        </Link>
         {/* LEFT */}
         <div className={styles.thumbnailSection}>
           {images.map((image, index) => (
