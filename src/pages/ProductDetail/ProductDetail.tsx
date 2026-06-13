@@ -132,7 +132,7 @@ const ProductDetail = () => {
             <img
               key={index}
               src={image}
-              alt=""
+              alt="Image Thumbnail"
               className={
                 selectedImage === image
                   ? styles.activeThumbnail
