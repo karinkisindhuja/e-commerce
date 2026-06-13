@@ -1,0 +1,23 @@
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.productsContainer {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.productGrid {
+  padding: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+@media (max-width: 767px) {
+  .productGrid {
+    grid-template-columns: 1fr;
+  }
+}
